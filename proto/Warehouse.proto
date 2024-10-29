@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package warehouse;
+
+service WarehouseService {
+  rpc verifyStock (verifyStockRequest) returns (Response);
+  rpc getWarehouseProduct (warehouseProductRequest) returns (Response);
+  rpc updateStock (Request) returns (Response);
+  rpc getWarehouse (Request) returns (Response);
+  rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+}
+
+message verifyStockRequest {
+  int32 warehouseId = 1;
+}
+
+message warehouseProductRequest {
+  int32 warehouseId = 1;
+  int32 productId = 2;
+}
+
+message Request {
+  string jsonData = 1;
+}
+
+
+message Response {
+  string message = 1;
+}
+
+
+message HealthCheckRequest {
+  string service = 1;
+}
+
+message HealthCheckResponse {
+  enum ServingStatus {
+    UNKNOWN = 0;
+    SERVING = 1;
+    NOT_SERVING = 2;
+  }
+  ServingStatus status = 1;
+}

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package fulfillment;
+
+service FulfillmentService {
+    rpc GetFulfillment (Request) returns (Response);
+    rpc GetConsignment (Request) returns (Response);
+    rpc ConsignmentLogCreate (Request) returns (Response);
+    rpc GetFulfillmentOrderId (Request) returns (Response);
+    rpc ConsignmentSave (Request) returns (Response);
+    rpc GetPackageInfo (Request) returns (Response);
+    rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+}
+
+message Request {
+    string jsonData = 1;
+}
+
+message Response {
+    string message = 1;
+}
+
+
+message HealthCheckRequest {
+    string service = 1;
+}
+
+message HealthCheckResponse {
+    enum ServingStatus {
+        UNKNOWN = 0;
+        SERVING = 1;
+        NOT_SERVING = 2;
+    }
+    ServingStatus status = 1;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "eiz/proto-manage",
+  "description": "pdf",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Fulfillment\\": "src/Fulfillment",
+      "Catalog\\": "src/Catalog",
+      "Warehouse\\": "src/Warehouse",
+      "Order\\": "src/Order",
+      "GPBMetadata\\": "src/GPBMetadata"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "grpc/grpc": "^1.57",
+    "google/protobuf": "^4.28"
+  },
+  "require-dev": {
+    "ext-grpc": "*"
+  },
+  "authors": [
+    {
+      "name": "leedong",
+      "email": "leedd521@163.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
