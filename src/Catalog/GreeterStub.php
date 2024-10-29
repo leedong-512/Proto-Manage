@@ -1,6 +1,6 @@
 <?php
 
-namespace Catalog;
+namespace Proto\Catalog;
 
 use Catalog\Request;
 use Catalog\Response;

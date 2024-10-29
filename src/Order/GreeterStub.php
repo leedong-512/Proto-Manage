@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Proto\Order;
+namespace Proto\Order;
 
 use Order\Request;
 use Order\Response;

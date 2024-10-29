@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Proto\Warehouse;
+namespace Proto\Warehouse;
 
 use Grpc\MethodDescriptor;
 use Grpc\ServerContext;
@@ -9,7 +9,6 @@ use Warehouse\Request;
 use Warehouse\verifyStockRequest;
 use Warehouse\Response;
 use Warehouse\warehouseProductRequest;
-use Warehouse\warehouseRequest;
 
 class GreeterStub
 {
