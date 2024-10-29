@@ -1,6 +1,6 @@
 {
   "name": "eiz/proto-manage",
-  "description": "pdf",
+  "description": "Proto Files Manage",
   "type": "library",
   "license": "MIT",
   "autoload": {
